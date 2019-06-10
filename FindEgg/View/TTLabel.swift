@@ -25,6 +25,13 @@ class TTLabel: UILabel {
         return label
     }
     
+    static func redDesciptionLabel() ->UILabel {
+        let label = UILabel()
+        label.textColor = .red
+        label.font = UIFont.systemFont(ofSize: 24)
+        return label
+    }
+    
     static func whiteTitleLabel() -> UILabel {
         let label = UILabel()
         label.textColor = .white

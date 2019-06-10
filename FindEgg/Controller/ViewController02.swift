@@ -37,16 +37,6 @@ class ViewController02: CommonViewController, UIViewControllerTransitioningDeleg
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(tap))
         tapGestureRecognizer.numberOfTouchesRequired = 1
         view.addGestureRecognizer(tapGestureRecognizer)
-        
-        let btn = TTButton.previousBtn()
-        btn.center = CGPoint(x: widthRate(rate: 0.1), y: heightRate(rate: 0.9))
-        view.addSubview(btn)
-        btn.rx.tap.subscribe(onNext: {
-            let vc = ViewController()
-            let viewControllerTransitioning = ViewControllerTransitioning()
-            vc.transitioningDelegate = viewControllerTransitioning
-            self.present(vc, animated: true, completion: nil)
-        })
 
         view.bringSubviewToFront(homeBtn)
         view.bringSubviewToFront(replayBtn)
@@ -57,21 +47,21 @@ class ViewController02: CommonViewController, UIViewControllerTransitioningDeleg
     @objc func tap() {
         let centerX = view.center.x
         if count == 0 {
-            let label1 = TTLabel.brownDesciptionLabel()
+            let label1 = TTLabel.redDesciptionLabel()
             label1.text = "快乐农场的早晨"
             label1.sizeToFit()
             label1.center = CGPoint(x: centerX, y: 50)
             view.addSubview(label1)
             fadeIn(view: label1)
         } else if count == 1 {
-            let label2 = TTLabel.brownDesciptionLabel()
+            let label2 = TTLabel.redDesciptionLabel()
             label2.text = "鸡妈妈照顾许久的蛋"
             label2.sizeToFit()
             label2.center = CGPoint(x: centerX, y: 100)
             view.addSubview(label2)
             fadeIn(view: label2)
         } else if count == 2 {
-            let label3 = TTLabel.brownDesciptionLabel()
+            let label3 = TTLabel.redDesciptionLabel()
             label3.text = "终于要孵化了"
             label3.sizeToFit()
             label3.center = CGPoint(x: centerX, y: 150)

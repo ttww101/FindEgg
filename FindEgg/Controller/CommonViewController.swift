@@ -54,6 +54,12 @@ class CommonViewController: UIViewController {
             make.right.equalTo(view).offset(-10)
             make.size.equalTo(CGSize(width: 70, height: 70))
         }
+        homeBtn.rx.tap.subscribe(onNext: {
+            let vc = viewControllers[0].init()
+            let viewControllerTransitioning = ViewControllerTransitioning()
+            vc.transitioningDelegate = viewControllerTransitioning
+            self.present(vc, animated: true, completion: nil)
+        })
         replayBtn.setImage(UIImage(named: "retru"), for: .normal)
         replayBtn.frame = CGRect(x: widthRate(rate: 0.05), y: heightRate(rate: 0.95), width: widthRate(rate: 0.07), height: widthRate(rate: 0.07))
         view.addSubview(replayBtn)
@@ -62,6 +68,12 @@ class CommonViewController: UIViewController {
             make.right.equalTo(homeBtn.snp.left).offset(-10)
             make.size.equalTo(CGSize(width: 70, height: 70))
         }
+        replayBtn.rx.tap.subscribe(onNext: {
+            let vc = type(of: self).init()
+            let viewControllerTransitioning = ViewControllerTransitioning()
+            vc.transitioningDelegate = viewControllerTransitioning
+            self.present(vc, animated: true, completion: nil)
+        })
         previousBtn.setImage(UIImage(named: "back"), for: .normal)
         previousBtn.frame = CGRect(x: widthRate(rate: 0.05), y: heightRate(rate: 0.95), width: widthRate(rate: 0.07), height: widthRate(rate: 0.07))
         view.addSubview(previousBtn)

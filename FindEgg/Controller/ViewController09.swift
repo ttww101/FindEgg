@@ -56,15 +56,15 @@ class ViewController09: CommonViewController {
         tapGestureRecognizer.numberOfTouchesRequired = 1
         view.addGestureRecognizer(tapGestureRecognizer)
         
-        let btn = TTButton.previousBtn()
-        btn.center = CGPoint(x: widthRate(rate: 0.1), y: heightRate(rate: 0.9))
-        view.addSubview(btn)
-        btn.rx.tap.subscribe(onNext: {
-            let vc = ViewController08()
-            let viewControllerTransitioning = ViewControllerTransitioning()
-            vc.transitioningDelegate = viewControllerTransitioning
-            self.present(vc, animated: true, completion: nil)
-        })
+//        let btn = TTButton.previousBtn()
+//        btn.center = CGPoint(x: widthRate(rate: 0.1), y: heightRate(rate: 0.9))
+//        view.addSubview(btn)
+//        btn.rx.tap.subscribe(onNext: {
+//            let vc = ViewController08()
+//            let viewControllerTransitioning = ViewControllerTransitioning()
+//            vc.transitioningDelegate = viewControllerTransitioning
+//            self.present(vc, animated: true, completion: nil)
+//        })
         
         view.bringSubviewToFront(homeBtn)
         view.bringSubviewToFront(replayBtn)

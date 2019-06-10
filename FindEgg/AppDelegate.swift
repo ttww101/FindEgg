@@ -18,12 +18,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         myPlayer = player(fileName: "背景1525154876", type: "wav")
+        myPlayer.numberOfLoops = -1
         myPlayer.play()
         return true
     }
 }
 
 func player(fileName: String, type: String) -> AVAudioPlayer {
+//    return AVAudioPlayer()
     let path = Bundle.main.path(forResource: fileName, ofType: type)
     let url = URL(fileURLWithPath: path!)
     return try! AVAudioPlayer(contentsOf: url)

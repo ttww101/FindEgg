@@ -24,28 +24,51 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
     }
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-        let fromViewController = transitionContext.viewController(forKey: .from)!
+        let fromViewController = transitionContext.viewController(forKey: .from)! as! ViewController
         let toViewController = transitionContext.viewController(forKey: .to)!
         let containerView = transitionContext.containerView
         
         containerView.addSubview(toViewController.view)
         containerView.addSubview(fromViewController.view)
-        
+//        self.leftScreenImgView.isHidden = true
+//        self.teacherImgView.isHidden = true
+        fromViewController.view.backgroundColor = .clear
         UIView.animate(withDuration: 1, animations: {
             let width = self.view.bounds.width
             let height = self.view.bounds.height
             
-            fromViewController.view.alpha = 0
-            self.leftScreenImgView.frame = CGRect(x: -width/2, y: 0, width: width/2, height: height)
-            self.rightScreenImgView.frame = CGRect(x: width, y: 0, width: width/2, height: height)
-            toViewController.view.alpha = 1
+//            fromViewController.view.alpha = 0
+            fromViewController.startBtn.alpha = 0
+            fromViewController.leftScreenImgView.frame = CGRect(x: -width/2, y: 0, width: width/2, height: height)
+            fromViewController.rightScreenImgView.frame = CGRect(x: width, y: 0, width: width/2, height: height)
+
+//            toViewController.view.alpha = 1
             
         }, completion: { finished in
-            UIView.animate(withDuration: 0.1, animations: {
-                toViewController.view.alpha = 1
-            }, completion: { finished in
-                transitionContext.completeTransition(true)
+            UIView.animate(withDuration: 1.0, animations: {
+                fromViewController.teacherImgView.frame = CGRect(x: widthRate(rate: 0.02), y: heightRate(rate: 0.3), width: widthRate(rate: 0.25), height: widthRate(rate: 0.424))
+                fromViewController.topScreenImgView.transform = CGAffineTransform(translationX: 0, y: heightRate(rate: -0.28))
+            }, completion: { (_) in
+                // text
+                UIView.animate(withDuration: 1.0, animations: {
+                    fromViewController.label.alpha = 1
+                }, completion: { (_) in
+                    UIView.animateKeyframes(withDuration: 1.0, delay: 3.0, options: [], animations: {
+                        fromViewController.view.alpha = 0
+                    }, completion: { (_) in
+                        transitionContext.completeTransition(true)
+                    })
+                    
+                })
             })
+            
+//            UIView.animate(withDuration: 1.0, animations: {
+//                <#code#>
+//            }, completion: { (_) in
+//                <#code#>
+//            })
+            
+            
             
         })
         
@@ -53,14 +76,19 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
     
     var leftScreenImgView: UIImageView!
     var rightScreenImgView: UIImageView!
+    var teacherImgView: UIImageView!
     
     let centerX = UIScreen.main.bounds.width / 2
     let centerY = UIScreen.main.bounds.height / 2
     let width = UIScreen.main.bounds.width
     let height = UIScreen.main.bounds.height
 
+    var label = UILabel()
+    var startBtn = UIButton()
+    var topScreenImgView = UIImageView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         let myPlayer = player(fileName: "背景1525154876", type: "wav")
         myPlayer.play()
@@ -76,33 +104,50 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
         rightScreenImgView.frame = CGRect(x: width/2, y: 0, width: width/2, height: height)
         view.addSubview(rightScreenImgView)
         
-        let topScreenImgView = UIImageView(named: "story_chicken_r03")
+        topScreenImgView = UIImageView(named: "story_chicken_r03")
         topScreenImgView.frame = CGRect(x: 0, y: 0, width: width, height: heightRate(rate: 0.28))
         view.addSubview(topScreenImgView)
         
         
-        let label = TTLabel.whiteTitleLabel()
+        label = TTLabel.whiteTitleLabel()
         label.text = "这是一个关于鸡妈妈的故事"
+        label.textColor = .black
         label.sizeToFit()
-        label.center = CGPoint(x: centerX, y: heightRate(rate: 0.55))
+        label.center = CGPoint(x: centerX + widthRate(rate: 0.05), y: heightRate(rate: 0.55))
+        label.alpha = 0
         
         view.addSubview(label)
+
+        teacherImgView = UIImageView(named: "story_chicken_t")
+        teacherImgView.frame = CGRect(x: widthRate(rate: 0.02), y: heightRate(rate: 0.3), width: widthRate(rate: 0.25), height: widthRate(rate: 0.424))
+        teacherImgView.center.x = view.center.x
+        view.addSubview(teacherImgView)
+//        teacherImgView.snp.makeConstraints { (make) in
+//            make.centerX.equalTo(view)
+//            make.top.equalTo(heightRate(rate: 0.3))
+//            make.size.equalTo(CGSize(width: widthRate(rate: 0.25), height: widthRate(rate: 0.424)))
+//        }
         
-        let startBtn = TTButton.startBtn()
-        startBtn.center = CGPoint(x: centerX, y: heightRate(rate: 0.7))
+        startBtn = TTButton.startBtn()
+        startBtn.center = CGPoint(x: centerX, y: heightRate(rate: 0.8))
         startBtn.setTitleColor(.white, for: .normal)
         view.addSubview(startBtn)
+        
 
-        let teacherImgView = UIImageView(named: "story_chicken_t")
-        teacherImgView.frame = CGRect(x: widthRate(rate: 0.02), y: heightRate(rate: 0.3), width: widthRate(rate: 0.25), height: widthRate(rate: 0.424))
-        view.addSubview(teacherImgView)
         
         startBtn.rx.tap.subscribe(onNext: {
-            UIView.animate(withDuration: 1.0) {
-                self.leftScreenImgView.frame = CGRect(x: -width/2, y: 0, width: width/2, height: height)
-                self.rightScreenImgView.frame = CGRect(x: width, y: 0, width: width/2, height: height)
-                startBtn.alpha = 0.0
-            }
+//            UIView.animate(withDuration: 1.0, animations: {
+//                self.leftScreenImgView.frame = CGRect(x: -width/2, y: 0, width: width/2, height: height)
+//                self.rightScreenImgView.frame = CGRect(x: width, y: 0, width: width/2, height: height)
+//
+//                startBtn.alpha = 0.0
+//            }, completion: { (_) in
+//                UIView.animate(withDuration: 1.0, animations: {
+//                    self.teacherImgView.frame = CGRect(x: widthRate(rate: 0.02), y: heightRate(rate: 0.3), width: widthRate(rate: 0.25), height: widthRate(rate: 0.424))
+//                }, completion: { (_) in
+//
+//                })
+//            })
             let vc2 = ViewController02()
             vc2.transitioningDelegate = self
             self.present(vc2, animated: true, completion: nil)
@@ -118,14 +163,16 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
             make.size.equalTo(CGSize(width: 70, height: 70))
         }
         
-        settingBtn.rx.tap.subscribe(onNext: {
-            for (index, ele) in viewControllers.enumerated() {
-                if ele == type(of: self) {
-                    print(index)
-                    self.present(ele.init(), animated: true, completion: nil)
-                }
-            }
-        })
+//        settingBtn.rx.tap.subscribe(onNext: {
+//            for (index, ele) in viewControllers.enumerated() {
+//                if ele == type(of: self) {
+//                    print(index)
+//                    self.present(ele.init(), animated: true, completion: nil)
+//                }
+//            }
+//        })
+        previousBtn.isHidden = true
+        nextBtn.isHidden = true
         view.bringSubviewToFront(homeBtn)
         view.bringSubviewToFront(replayBtn)
         view.bringSubviewToFront(previousBtn)
