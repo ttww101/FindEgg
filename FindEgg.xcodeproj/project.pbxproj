@@ -1,0 +1,590 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		180C576122A52B86007B9B9F /* ViewController04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C576022A52B86007B9B9F /* ViewController04.swift */; };
+		180C576322A53378007B9B9F /* ViewController05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C576222A53378007B9B9F /* ViewController05.swift */; };
+		180C576522A60454007B9B9F /* ViewController06.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C576422A60454007B9B9F /* ViewController06.swift */; };
+		180C576722A606D8007B9B9F /* ViewController07.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C576622A606D8007B9B9F /* ViewController07.swift */; };
+		180C576922A6084D007B9B9F /* ViewControllerTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C576822A6084D007B9B9F /* ViewControllerTransitioning.swift */; };
+		180C576B22A6108B007B9B9F /* BlackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180C576A22A6108A007B9B9F /* BlackViewController.swift */; };
+		181FF6D922A62A55006E1D7E /* ViewController08.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FF6D822A62A55006E1D7E /* ViewController08.swift */; };
+		181FF6DB22A62A68006E1D7E /* ViewController09.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FF6DA22A62A68006E1D7E /* ViewController09.swift */; };
+		181FF6DD22A62A72006E1D7E /* ViewController10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FF6DC22A62A72006E1D7E /* ViewController10.swift */; };
+		183E710122A4B9C400A7240F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E710022A4B9C400A7240F /* AppDelegate.swift */; };
+		183E710322A4B9C400A7240F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E710222A4B9C400A7240F /* ViewController.swift */; };
+		183E710622A4B9C400A7240F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183E710422A4B9C400A7240F /* Main.storyboard */; };
+		183E710822A4B9C500A7240F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 183E710722A4B9C500A7240F /* Assets.xcassets */; };
+		183E710B22A4B9C500A7240F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 183E710922A4B9C500A7240F /* LaunchScreen.storyboard */; };
+		183E711322A4C39800A7240F /* TTButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E711222A4C39800A7240F /* TTButton.swift */; };
+		183E711922A4D61300A7240F /* ViewController02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E711822A4D61300A7240F /* ViewController02.swift */; };
+		183E711B22A4F99100A7240F /* TTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E711A22A4F99100A7240F /* TTLabel.swift */; };
+		183E714422A51C6A00A7240F /* ViewController03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E714322A51C6A00A7240F /* ViewController03.swift */; };
+		183E714622A51E2D00A7240F /* CommonViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E714522A51E2D00A7240F /* CommonViewControllerAnimatedTransitioning.swift */; };
+		189D946822A8BE760009DA6B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D946722A8BE760009DA6B /* ViewModel.swift */; };
+		189D947C22A8E5150009DA6B /* 04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 189D946C22A8E5140009DA6B /* 04.wav */; };
+		189D947D22A8E5150009DA6B /* 05音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D946D22A8E5140009DA6B /* 05音效.mp3 */; };
+		189D947E22A8E5150009DA6B /* 09羊.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D946E22A8E5140009DA6B /* 09羊.mp3 */; };
+		189D947F22A8E5150009DA6B /* 背景1525154876.wav in Resources */ = {isa = PBXBuildFile; fileRef = 189D946F22A8E5140009DA6B /* 背景1525154876.wav */; };
+		189D948022A8E5150009DA6B /* 03雞.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D947022A8E5140009DA6B /* 03雞.mp3 */; };
+		189D948122A8E5150009DA6B /* 01開場音效.wav in Resources */ = {isa = PBXBuildFile; fileRef = 189D947122A8E5140009DA6B /* 01開場音效.wav */; };
+		189D948222A8E5150009DA6B /* 14蛇.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D947222A8E5140009DA6B /* 14蛇.mp3 */; };
+		189D948322A8E5150009DA6B /* 07驢.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D947322A8E5140009DA6B /* 07驢.mp3 */; };
+		189D948422A8E5150009DA6B /* 06.wav in Resources */ = {isa = PBXBuildFile; fileRef = 189D947422A8E5140009DA6B /* 06.wav */; };
+		189D948522A8E5150009DA6B /* 07雞.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D947522A8E5140009DA6B /* 07雞.mp3 */; };
+		189D948622A8E5150009DA6B /* 21.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D947622A8E5140009DA6B /* 21.mp3 */; };
+		189D948722A8E5150009DA6B /* 18_19_20_21音效.wav in Resources */ = {isa = PBXBuildFile; fileRef = 189D947722A8E5140009DA6B /* 18_19_20_21音效.wav */; };
+		189D948822A8E5150009DA6B /* 17鵝.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D947822A8E5140009DA6B /* 17鵝.mp3 */; };
+		189D948922A8E5150009DA6B /* 12牛.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D947922A8E5140009DA6B /* 12牛.mp3 */; };
+		189D948A22A8E5150009DA6B /* 02第一幕音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D947A22A8E5140009DA6B /* 02第一幕音效.mp3 */; };
+		189D948B22A8E5150009DA6B /* 17小雞.wav in Resources */ = {isa = PBXBuildFile; fileRef = 189D947B22A8E5140009DA6B /* 17小雞.wav */; };
+		189EB5FD22AE3FD400602FE8 /* CommonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189EB5FC22AE3FD400602FE8 /* CommonViewController.swift */; };
+		814547A2B920AA151049AF60 /* Pods_FindEgg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA78FE5C885718B5DA515227 /* Pods_FindEgg.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		180C576022A52B86007B9B9F /* ViewController04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController04.swift; sourceTree = "<group>"; };
+		180C576222A53378007B9B9F /* ViewController05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController05.swift; sourceTree = "<group>"; };
+		180C576422A60454007B9B9F /* ViewController06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController06.swift; sourceTree = "<group>"; };
+		180C576622A606D8007B9B9F /* ViewController07.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController07.swift; sourceTree = "<group>"; };
+		180C576822A6084D007B9B9F /* ViewControllerTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTransitioning.swift; sourceTree = "<group>"; };
+		180C576A22A6108A007B9B9F /* BlackViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackViewController.swift; sourceTree = "<group>"; };
+		181FF6D822A62A55006E1D7E /* ViewController08.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController08.swift; sourceTree = "<group>"; };
+		181FF6DA22A62A68006E1D7E /* ViewController09.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController09.swift; sourceTree = "<group>"; };
+		181FF6DC22A62A72006E1D7E /* ViewController10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController10.swift; sourceTree = "<group>"; };
+		183E70FD22A4B9C400A7240F /* FindEgg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FindEgg.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		183E710022A4B9C400A7240F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		183E710222A4B9C400A7240F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		183E710522A4B9C400A7240F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		183E710722A4B9C500A7240F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		183E710A22A4B9C500A7240F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		183E710C22A4B9C500A7240F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		183E711222A4C39800A7240F /* TTButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTButton.swift; sourceTree = "<group>"; };
+		183E711822A4D61300A7240F /* ViewController02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController02.swift; sourceTree = "<group>"; };
+		183E711A22A4F99100A7240F /* TTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLabel.swift; sourceTree = "<group>"; };
+		183E714322A51C6A00A7240F /* ViewController03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController03.swift; sourceTree = "<group>"; };
+		183E714522A51E2D00A7240F /* CommonViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		189D946722A8BE760009DA6B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		189D946C22A8E5140009DA6B /* 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04.wav; sourceTree = "<group>"; };
+		189D946D22A8E5140009DA6B /* 05音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05音效.mp3"; sourceTree = "<group>"; };
+		189D946E22A8E5140009DA6B /* 09羊.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "09羊.mp3"; sourceTree = "<group>"; };
+		189D946F22A8E5140009DA6B /* 背景1525154876.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "背景1525154876.wav"; sourceTree = "<group>"; };
+		189D947022A8E5140009DA6B /* 03雞.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "03雞.mp3"; sourceTree = "<group>"; };
+		189D947122A8E5140009DA6B /* 01開場音效.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "01開場音效.wav"; sourceTree = "<group>"; };
+		189D947222A8E5140009DA6B /* 14蛇.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "14蛇.mp3"; sourceTree = "<group>"; };
+		189D947322A8E5140009DA6B /* 07驢.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "07驢.mp3"; sourceTree = "<group>"; };
+		189D947422A8E5140009DA6B /* 06.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 06.wav; sourceTree = "<group>"; };
+		189D947522A8E5140009DA6B /* 07雞.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "07雞.mp3"; sourceTree = "<group>"; };
+		189D947622A8E5140009DA6B /* 21.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 21.mp3; sourceTree = "<group>"; };
+		189D947722A8E5140009DA6B /* 18_19_20_21音效.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "18_19_20_21音效.wav"; sourceTree = "<group>"; };
+		189D947822A8E5140009DA6B /* 17鵝.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "17鵝.mp3"; sourceTree = "<group>"; };
+		189D947922A8E5140009DA6B /* 12牛.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "12牛.mp3"; sourceTree = "<group>"; };
+		189D947A22A8E5140009DA6B /* 02第一幕音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "02第一幕音效.mp3"; sourceTree = "<group>"; };
+		189D947B22A8E5140009DA6B /* 17小雞.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "17小雞.wav"; sourceTree = "<group>"; };
+		189EB5FC22AE3FD400602FE8 /* CommonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewController.swift; sourceTree = "<group>"; };
+		AA78FE5C885718B5DA515227 /* Pods_FindEgg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FindEgg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D84E5315B3A3B6C474D4FD5A /* Pods-FindEgg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindEgg.release.xcconfig"; path = "Target Support Files/Pods-FindEgg/Pods-FindEgg.release.xcconfig"; sourceTree = "<group>"; };
+		E2407DD661646C320F50E145 /* Pods-FindEgg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FindEgg.debug.xcconfig"; path = "Target Support Files/Pods-FindEgg/Pods-FindEgg.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		183E70FA22A4B9C400A7240F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814547A2B920AA151049AF60 /* Pods_FindEgg.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		183E70F422A4B9C400A7240F = {
+			isa = PBXGroup;
+			children = (
+				183E70FF22A4B9C400A7240F /* FindEgg */,
+				183E70FE22A4B9C400A7240F /* Products */,
+				5918B4ED9B7B9F794D1EABCB /* Pods */,
+				A1FE2523981890E1627BF278 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		183E70FE22A4B9C400A7240F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				183E70FD22A4B9C400A7240F /* FindEgg.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		183E70FF22A4B9C400A7240F /* FindEgg */ = {
+			isa = PBXGroup;
+			children = (
+				189D946B22A8D4700009DA6B /* Sound */,
+				183E711722A4C3BC00A7240F /* Model */,
+				183E711622A4C3B300A7240F /* Controller */,
+				183E711522A4C3A900A7240F /* ViewModel */,
+				183E711422A4C3A200A7240F /* View */,
+				183E710022A4B9C400A7240F /* AppDelegate.swift */,
+				183E710422A4B9C400A7240F /* Main.storyboard */,
+				183E710722A4B9C500A7240F /* Assets.xcassets */,
+				183E710922A4B9C500A7240F /* LaunchScreen.storyboard */,
+				183E710C22A4B9C500A7240F /* Info.plist */,
+			);
+			path = FindEgg;
+			sourceTree = "<group>";
+		};
+		183E711422A4C3A200A7240F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				183E711A22A4F99100A7240F /* TTLabel.swift */,
+				183E711222A4C39800A7240F /* TTButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		183E711522A4C3A900A7240F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				189D946722A8BE760009DA6B /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		183E711622A4C3B300A7240F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				189EB5FC22AE3FD400602FE8 /* CommonViewController.swift */,
+				180C576A22A6108A007B9B9F /* BlackViewController.swift */,
+				183E710222A4B9C400A7240F /* ViewController.swift */,
+				183E711822A4D61300A7240F /* ViewController02.swift */,
+				183E714322A51C6A00A7240F /* ViewController03.swift */,
+				180C576022A52B86007B9B9F /* ViewController04.swift */,
+				180C576222A53378007B9B9F /* ViewController05.swift */,
+				180C576422A60454007B9B9F /* ViewController06.swift */,
+				180C576622A606D8007B9B9F /* ViewController07.swift */,
+				181FF6D822A62A55006E1D7E /* ViewController08.swift */,
+				181FF6DA22A62A68006E1D7E /* ViewController09.swift */,
+				181FF6DC22A62A72006E1D7E /* ViewController10.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		183E711722A4C3BC00A7240F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				180C576822A6084D007B9B9F /* ViewControllerTransitioning.swift */,
+				183E714522A51E2D00A7240F /* CommonViewControllerAnimatedTransitioning.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		189D946B22A8D4700009DA6B /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				189D947122A8E5140009DA6B /* 01開場音效.wav */,
+				189D947A22A8E5140009DA6B /* 02第一幕音效.mp3 */,
+				189D947022A8E5140009DA6B /* 03雞.mp3 */,
+				189D946C22A8E5140009DA6B /* 04.wav */,
+				189D946D22A8E5140009DA6B /* 05音效.mp3 */,
+				189D947422A8E5140009DA6B /* 06.wav */,
+				189D947522A8E5140009DA6B /* 07雞.mp3 */,
+				189D947322A8E5140009DA6B /* 07驢.mp3 */,
+				189D946E22A8E5140009DA6B /* 09羊.mp3 */,
+				189D947922A8E5140009DA6B /* 12牛.mp3 */,
+				189D947222A8E5140009DA6B /* 14蛇.mp3 */,
+				189D947B22A8E5140009DA6B /* 17小雞.wav */,
+				189D947822A8E5140009DA6B /* 17鵝.mp3 */,
+				189D947722A8E5140009DA6B /* 18_19_20_21音效.wav */,
+				189D947622A8E5140009DA6B /* 21.mp3 */,
+				189D946F22A8E5140009DA6B /* 背景1525154876.wav */,
+			);
+			path = Sound;
+			sourceTree = "<group>";
+		};
+		5918B4ED9B7B9F794D1EABCB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E2407DD661646C320F50E145 /* Pods-FindEgg.debug.xcconfig */,
+				D84E5315B3A3B6C474D4FD5A /* Pods-FindEgg.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A1FE2523981890E1627BF278 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA78FE5C885718B5DA515227 /* Pods_FindEgg.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		183E70FC22A4B9C400A7240F /* FindEgg */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 183E710F22A4B9C500A7240F /* Build configuration list for PBXNativeTarget "FindEgg" */;
+			buildPhases = (
+				F95B91465E5FA5A7BDF83EA5 /* [CP] Check Pods Manifest.lock */,
+				183E70F922A4B9C400A7240F /* Sources */,
+				183E70FA22A4B9C400A7240F /* Frameworks */,
+				183E70FB22A4B9C400A7240F /* Resources */,
+				B4AA93ABADEB367A5DD77539 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FindEgg;
+			productName = FindEgg;
+			productReference = 183E70FD22A4B9C400A7240F /* FindEgg.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		183E70F522A4B9C400A7240F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = com.cn.mystory;
+				TargetAttributes = {
+					183E70FC22A4B9C400A7240F = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 183E70F822A4B9C400A7240F /* Build configuration list for PBXProject "FindEgg" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 183E70F422A4B9C400A7240F;
+			productRefGroup = 183E70FE22A4B9C400A7240F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				183E70FC22A4B9C400A7240F /* FindEgg */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		183E70FB22A4B9C400A7240F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				189D948322A8E5150009DA6B /* 07驢.mp3 in Resources */,
+				189D948A22A8E5150009DA6B /* 02第一幕音效.mp3 in Resources */,
+				189D948622A8E5150009DA6B /* 21.mp3 in Resources */,
+				189D948922A8E5150009DA6B /* 12牛.mp3 in Resources */,
+				189D947E22A8E5150009DA6B /* 09羊.mp3 in Resources */,
+				183E710B22A4B9C500A7240F /* LaunchScreen.storyboard in Resources */,
+				183E710822A4B9C500A7240F /* Assets.xcassets in Resources */,
+				189D948222A8E5150009DA6B /* 14蛇.mp3 in Resources */,
+				189D948B22A8E5150009DA6B /* 17小雞.wav in Resources */,
+				189D948522A8E5150009DA6B /* 07雞.mp3 in Resources */,
+				189D947D22A8E5150009DA6B /* 05音效.mp3 in Resources */,
+				189D947C22A8E5150009DA6B /* 04.wav in Resources */,
+				183E710622A4B9C400A7240F /* Main.storyboard in Resources */,
+				189D948822A8E5150009DA6B /* 17鵝.mp3 in Resources */,
+				189D948722A8E5150009DA6B /* 18_19_20_21音效.wav in Resources */,
+				189D948422A8E5150009DA6B /* 06.wav in Resources */,
+				189D948122A8E5150009DA6B /* 01開場音效.wav in Resources */,
+				189D948022A8E5150009DA6B /* 03雞.mp3 in Resources */,
+				189D947F22A8E5150009DA6B /* 背景1525154876.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B4AA93ABADEB367A5DD77539 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FindEgg/Pods-FindEgg-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxRelay.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FindEgg/Pods-FindEgg-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F95B91465E5FA5A7BDF83EA5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FindEgg-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		183E70F922A4B9C400A7240F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180C576522A60454007B9B9F /* ViewController06.swift in Sources */,
+				181FF6DD22A62A72006E1D7E /* ViewController10.swift in Sources */,
+				183E711322A4C39800A7240F /* TTButton.swift in Sources */,
+				181FF6DB22A62A68006E1D7E /* ViewController09.swift in Sources */,
+				183E710322A4B9C400A7240F /* ViewController.swift in Sources */,
+				183E714622A51E2D00A7240F /* CommonViewControllerAnimatedTransitioning.swift in Sources */,
+				189D946822A8BE760009DA6B /* ViewModel.swift in Sources */,
+				180C576922A6084D007B9B9F /* ViewControllerTransitioning.swift in Sources */,
+				183E711B22A4F99100A7240F /* TTLabel.swift in Sources */,
+				189EB5FD22AE3FD400602FE8 /* CommonViewController.swift in Sources */,
+				181FF6D922A62A55006E1D7E /* ViewController08.swift in Sources */,
+				180C576122A52B86007B9B9F /* ViewController04.swift in Sources */,
+				183E711922A4D61300A7240F /* ViewController02.swift in Sources */,
+				180C576322A53378007B9B9F /* ViewController05.swift in Sources */,
+				180C576722A606D8007B9B9F /* ViewController07.swift in Sources */,
+				183E710122A4B9C400A7240F /* AppDelegate.swift in Sources */,
+				180C576B22A6108B007B9B9F /* BlackViewController.swift in Sources */,
+				183E714422A51C6A00A7240F /* ViewController03.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		183E710422A4B9C400A7240F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				183E710522A4B9C400A7240F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		183E710922A4B9C500A7240F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				183E710A22A4B9C500A7240F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		183E710D22A4B9C500A7240F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		183E710E22A4B9C500A7240F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		183E711022A4B9C500A7240F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E2407DD661646C320F50E145 /* Pods-FindEgg.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7276CMQ83;
+				INFOPLIST_FILE = FindEgg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.story.findEgg.FindEgg3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		183E711122A4B9C500A7240F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D84E5315B3A3B6C474D4FD5A /* Pods-FindEgg.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = X7276CMQ83;
+				INFOPLIST_FILE = FindEgg/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.story.findEgg.FindEgg3;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		183E70F822A4B9C400A7240F /* Build configuration list for PBXProject "FindEgg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183E710D22A4B9C500A7240F /* Debug */,
+				183E710E22A4B9C500A7240F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		183E710F22A4B9C500A7240F /* Build configuration list for PBXNativeTarget "FindEgg" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				183E711022A4B9C500A7240F /* Debug */,
+				183E711122A4B9C500A7240F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 183E70F522A4B9C400A7240F /* Project object */;
+}
