@@ -25,7 +25,7 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
     
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         let fromViewController = transitionContext.viewController(forKey: .from)! as! ViewController
-        let toViewController = transitionContext.viewController(forKey: .to)!
+        let toViewController = transitionContext.viewController(forKey: .to)! as! ViewController02
         let containerView = transitionContext.containerView
         
         containerView.addSubview(toViewController.view)
@@ -33,7 +33,7 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
 //        self.leftScreenImgView.isHidden = true
 //        self.teacherImgView.isHidden = true
         fromViewController.view.backgroundColor = .clear
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 1/TimeInterval(speed*3), animations: {
             let width = self.view.bounds.width
             let height = self.view.bounds.height
             
@@ -45,18 +45,19 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
 //            toViewController.view.alpha = 1
             
         }, completion: { finished in
-            UIView.animate(withDuration: 1.0, animations: {
+            UIView.animate(withDuration: 1.0/TimeInterval(speed*3), animations: {
                 fromViewController.teacherImgView.frame = CGRect(x: widthRate(rate: 0.02), y: heightRate(rate: 0.3), width: widthRate(rate: 0.25), height: widthRate(rate: 0.424))
                 fromViewController.topScreenImgView.transform = CGAffineTransform(translationX: 0, y: heightRate(rate: -0.28))
             }, completion: { (_) in
                 // text
-                UIView.animate(withDuration: 1.0, animations: {
+                UIView.animate(withDuration: 1.0/TimeInterval(speed*3), animations: {
                     fromViewController.label.alpha = 1
                 }, completion: { (_) in
-                    UIView.animateKeyframes(withDuration: 1.0, delay: 3.0, options: [], animations: {
+                    UIView.animateKeyframes(withDuration: 1.0/TimeInterval(speed*3), delay: 3.0/TimeInterval(speed*3), options: [], animations: {
                         fromViewController.view.alpha = 0
                     }, completion: { (_) in
                         transitionContext.completeTransition(true)
+                        toViewController.tap()
                     })
                     
                 })
@@ -109,9 +110,11 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
         view.addSubview(topScreenImgView)
         
         
-        label = TTLabel.whiteTitleLabel()
+        label = TTLabel.brownDesciptionLabel()
         label.text = "这是一个关于鸡妈妈的故事"
-        label.textColor = .black
+//        label.textColor = .red
+        label.sizeToFit()
+        label.font = UIFont.systemFont(ofSize: 25)
         label.sizeToFit()
         label.center = CGPoint(x: centerX + widthRate(rate: 0.05), y: heightRate(rate: 0.55))
         label.alpha = 0
@@ -162,15 +165,23 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
             make.right.equalTo(view).offset(-10)
             make.size.equalTo(CGSize(width: 70, height: 70))
         }
+        settingView.center = self.view.center
+        settingView.isHidden = true
+        view.addSubview(self.settingView)
         
-//        settingBtn.rx.tap.subscribe(onNext: {
-//            for (index, ele) in viewControllers.enumerated() {
-//                if ele == type(of: self) {
-//                    print(index)
-//                    self.present(ele.init(), animated: true, completion: nil)
-//                }
-//            }
-//        })
+        
+        settingView.closeBtn.rx.tap.subscribe(onNext: {
+            self.settingView.isHidden = true
+        })
+        settingBtn.rx.tap.subscribe(onNext: {
+            self.settingView.isHidden = false
+            self.settingView.indConstraint1?.update(offset: self.settingView.ind(val: volume))
+            self.settingView.indVal1 = volume
+            self.settingView.indVal2 = (speed - 1/3) * (3/2)
+            self.settingView.indConstraint2?.update(offset: self.settingView.ind(val: self.settingView.indVal2))
+            volume = CGFloat(UserDefaults.standard.double(forKey: "volume"))
+            speed = CGFloat(UserDefaults.standard.double(forKey: "speed"))
+        })
         previousBtn.isHidden = true
         nextBtn.isHidden = true
         view.bringSubviewToFront(homeBtn)
@@ -179,6 +190,8 @@ class ViewController: CommonViewController, UIViewControllerAnimatedTransitionin
         view.bringSubviewToFront(nextBtn)
 
     }
+    
+    let settingView = SettingView(frame: CGRect(x: 0, y: 0, width: widthRate(rate: 0.7), height: widthRate(rate: 0.398)))
 
 
 }

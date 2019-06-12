@@ -32,7 +32,7 @@ class ViewController10: CommonViewController, UIViewControllerAnimatedTransition
         toViewController.rightScreenImgView.frame = CGRect(x: width, y: 0, width: width/2, height: height)
         
         
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 1/TimeInterval(speed*3), animations: {
             let width = self.view.bounds.width
             let height = self.view.bounds.height
             
@@ -42,7 +42,7 @@ class ViewController10: CommonViewController, UIViewControllerAnimatedTransition
             toViewController.view.alpha = 1
             
         }, completion: { finished in
-            UIView.animate(withDuration: 0.1, animations: {
+            UIView.animate(withDuration: 0.1/TimeInterval(speed*3), animations: {
                 toViewController.view.alpha = 1
             }, completion: { finished in
                 transitionContext.completeTransition(true)
@@ -70,7 +70,7 @@ class ViewController10: CommonViewController, UIViewControllerAnimatedTransition
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        myPlayer = player(fileName: "21", type: "mp3")
         henImgView.isHidden = true
         teacherImgView.isHidden = true
         talkBoxImgView.isHidden = true
@@ -177,7 +177,7 @@ class ViewController10: CommonViewController, UIViewControllerAnimatedTransition
 //                }
                 do {
                     let delayCount = delayCount
-                    UIView.animate(withDuration: time, delay: delayCount, options: [], animations: {
+                    UIView.animate(withDuration: time/TimeInterval(speed*3), delay: delayCount/TimeInterval(speed*3), options: [], animations: {
                             chick.center = center
                     }, completion: { (success) in
                             if (5-delayCount/time) >= 0 {

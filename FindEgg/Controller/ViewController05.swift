@@ -66,7 +66,7 @@ class ViewController05: CommonViewController {
             henImgView.isHidden = false
             henImgView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1);
             
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 1/TimeInterval(speed*3), animations: {
                 self.henImgView.transform = CGAffineTransform(scaleX: 1, y: 1);
             }) { (success) in
                 shake(view: self.henImgView)
@@ -74,6 +74,7 @@ class ViewController05: CommonViewController {
         } else if count == 1 {
             talkBoxImgView.isHidden = false
             label.isHidden = false
+            myPlayer = player(fileName: "06", type: "wav")
         } else if count == 2 {
             magnifierImgView.isHidden = false
             let r = widthRate(rate: 0.02)
@@ -82,7 +83,7 @@ class ViewController05: CommonViewController {
             }
             let time = 0.1
             for i in 0..<30 {
-                UIView.animate(withDuration: time, delay: TimeInterval(i)*time, options: [], animations: {
+                UIView.animate(withDuration: time/TimeInterval(speed*3), delay: TimeInterval(i)*time/TimeInterval(speed*3), options: [], animations: {
                     self.magnifierImgView.center = pos(p: self.magnifierImgView.center, r: widthRate(rate: 0.01), i: -CGFloat(0.1*Double(i)))
                 }) { (s) in
                     

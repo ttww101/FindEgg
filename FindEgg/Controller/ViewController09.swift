@@ -19,6 +19,7 @@ class ViewController09: CommonViewController {
     var myPlayer :AVAudioPlayer!
     override func viewDidLoad() {
         super.viewDidLoad()
+        myPlayer = player(fileName: "18_19_20_21音效", type: "wav")
         teacherImgView.isHidden = true
         henImgView.isHidden = true
         eggImgView.isHidden = true
@@ -85,7 +86,7 @@ class ViewController09: CommonViewController {
             eggImgView.isHidden = false
             gooseEggsImgView.isHidden = false
         } else if count == 3 {
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 1/TimeInterval(speed*3), animations: {
                 self.eggImgView.frame = CGRect(x: widthRate(rate: 0.66), y: heightRate(rate: 0.57), width: heightRate(rate: 0.05), height: heightRate(rate: 0.04))
                 let animation = CABasicAnimation(keyPath: "transform.rotation.z")
                 animation.fromValue = NSNumber(value: 0)

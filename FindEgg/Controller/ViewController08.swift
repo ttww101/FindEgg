@@ -75,12 +75,14 @@ class ViewController08: CommonViewController {
         } else if count == 1 {
             breakEggImgView.isHidden = false
             fadeIn(view: breakEggImgView)
+            myPlayer = player(fileName: "17小雞", type: "wav")
         } else if count == 2 {
             gooseImgView.isHidden = false
             shake(view: gooseImgView)
         } else if count == 3 {
             talkBoxImgView.isHidden = false
             label.isHidden = false
+            myPlayer = player(fileName: "17鵝", type: "mp3")
         } else if count == 4 {
             let vc = ViewController09()
             let viewControllerTransitioning = ViewControllerTransitioning()

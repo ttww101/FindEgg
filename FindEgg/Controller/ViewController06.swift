@@ -85,7 +85,7 @@ class ViewController06: CommonViewController {
             henImgView.isHidden = false
             self.henImgView.transform = CGAffineTransform(translationX: widthRate(rate:-0.5), y: 0)
             
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 1/TimeInterval(speed*3), animations: {
                 self.henImgView.transform = CGAffineTransform(translationX: 0, y: 0)
             }) { (success) in
                 shake(view: self.henImgView)
@@ -111,7 +111,7 @@ class ViewController06: CommonViewController {
                     momAnimation.repeatCount = 36 //无限重复
                     momAnimation.autoreverses = true //动画结束时执行逆动画
                     henImgView.layer.add(momAnimation, forKey: "centerLayer")
-                    animation.startAnimation(afterDelay: 1.2 * Double(index))
+                    animation.startAnimation(afterDelay: 1.2 * Double(index)/TimeInterval(speed*3))
                     animations.append(animation)
                     
                 }
@@ -126,7 +126,7 @@ class ViewController06: CommonViewController {
             } else {
                 time = 1
             }
-            UIView.animate(withDuration: time, animations: {
+            UIView.animate(withDuration: time/TimeInterval(speed*3), animations: {
                 self.animalImgView.transform = CGAffineTransform(translationX: 0, y: 0)
             }) { (success) in
                 shake(view: self.animalImgView)
@@ -135,6 +135,7 @@ class ViewController06: CommonViewController {
         } else if count == 2 {
             label.isHidden = false
             talkBoxImgView.isHidden = false
+            myPlayer = player(fileName: "07雞", type: "mp3")
             count = 3
         } else if count == 3 {
             if pageCount == 0 {
@@ -149,6 +150,7 @@ class ViewController06: CommonViewController {
                 vc.count = 2
                 vc.henImgView.isHidden = false
                 vc.animalImgView.isHidden = false
+                myPlayer = player(fileName: "07驢", type: "mp3")
                 
             } else if pageCount == 1 {
                 let vc = ViewController06()
@@ -159,6 +161,7 @@ class ViewController06: CommonViewController {
                 vc.transitioningDelegate = viewControllerTransitioning
                 vc.pageCount = pageCount + 1
                 self.present(vc, animated: true, completion: nil)
+                myPlayer = player(fileName: "09羊", type: "mp3")
             } else if pageCount == 2 {
                 let vc = ViewController06()
                 vc.animalImgName = "story_chicken_am302"
@@ -189,6 +192,7 @@ class ViewController06: CommonViewController {
                 vc.transitioningDelegate = viewControllerTransitioning
                 vc.pageCount = pageCount + 1
                 self.present(vc, animated: true, completion: nil)
+                myPlayer = player(fileName: "12牛", type: "mp3")
             } else if pageCount == 5 {
                 let vc = BlackViewController()
                 vc.label.text = "鸡妈妈\n急忙得跑到围墙外找蛇大哥"

@@ -98,6 +98,7 @@ class ViewController07: CommonViewController {
         } else if count == 3 {
             talkBoxImgView2.isHidden = false
             label2.isHidden = false
+            myPlayer = player(fileName: "14蛇", type: "mp3")
         } else if count == 4 {
             let vc = ViewController08()
             let viewControllerTransitioning = ViewControllerTransitioning()

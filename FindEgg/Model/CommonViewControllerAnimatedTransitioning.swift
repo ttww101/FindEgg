@@ -21,7 +21,7 @@ class CommonViewControllerAnimatedTransitioning: NSObject, UIViewControllerAnima
         containerView.addSubview(toViewController.view)
         containerView.addSubview(fromViewController.view)
         
-        UIView.animate(withDuration: 1, animations: {
+        UIView.animate(withDuration: 1/TimeInterval(speed*3), animations: {
             fromViewController.view.alpha = 0
             toViewController.view.alpha = 1
         }, completion: { finished in

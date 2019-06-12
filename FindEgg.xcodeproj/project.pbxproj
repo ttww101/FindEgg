@@ -26,6 +26,8 @@
 		183E711B22A4F99100A7240F /* TTLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E711A22A4F99100A7240F /* TTLabel.swift */; };
 		183E714422A51C6A00A7240F /* ViewController03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E714322A51C6A00A7240F /* ViewController03.swift */; };
 		183E714622A51E2D00A7240F /* CommonViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 183E714522A51E2D00A7240F /* CommonViewControllerAnimatedTransitioning.swift */; };
+		1844752922AF4FDE000A2391 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844752822AF4FDE000A2391 /* SettingViewController.swift */; };
+		1844752B22AF51C6000A2391 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1844752A22AF51C6000A2391 /* SettingView.swift */; };
 		189D946822A8BE760009DA6B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 189D946722A8BE760009DA6B /* ViewModel.swift */; };
 		189D947C22A8E5150009DA6B /* 04.wav in Resources */ = {isa = PBXBuildFile; fileRef = 189D946C22A8E5140009DA6B /* 04.wav */; };
 		189D947D22A8E5150009DA6B /* 05音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 189D946D22A8E5140009DA6B /* 05音效.mp3 */; };
@@ -69,6 +71,8 @@
 		183E711A22A4F99100A7240F /* TTLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TTLabel.swift; sourceTree = "<group>"; };
 		183E714322A51C6A00A7240F /* ViewController03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController03.swift; sourceTree = "<group>"; };
 		183E714522A51E2D00A7240F /* CommonViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonViewControllerAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		1844752822AF4FDE000A2391 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		1844752A22AF51C6000A2391 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		189D946722A8BE760009DA6B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		189D946C22A8E5140009DA6B /* 04.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 04.wav; sourceTree = "<group>"; };
 		189D946D22A8E5140009DA6B /* 05音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "05音效.mp3"; sourceTree = "<group>"; };
@@ -142,6 +146,7 @@
 		183E711422A4C3A200A7240F /* View */ = {
 			isa = PBXGroup;
 			children = (
+				1844752A22AF51C6000A2391 /* SettingView.swift */,
 				183E711A22A4F99100A7240F /* TTLabel.swift */,
 				183E711222A4C39800A7240F /* TTButton.swift */,
 			);
@@ -159,6 +164,7 @@
 		183E711622A4C3B300A7240F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1844752822AF4FDE000A2391 /* SettingViewController.swift */,
 				189EB5FC22AE3FD400602FE8 /* CommonViewController.swift */,
 				180C576A22A6108A007B9B9F /* BlackViewController.swift */,
 				183E710222A4B9C400A7240F /* ViewController.swift */,
@@ -367,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				180C576522A60454007B9B9F /* ViewController06.swift in Sources */,
+				1844752B22AF51C6000A2391 /* SettingView.swift in Sources */,
 				181FF6DD22A62A72006E1D7E /* ViewController10.swift in Sources */,
 				183E711322A4C39800A7240F /* TTButton.swift in Sources */,
 				181FF6DB22A62A68006E1D7E /* ViewController09.swift in Sources */,
@@ -382,6 +389,7 @@
 				180C576322A53378007B9B9F /* ViewController05.swift in Sources */,
 				180C576722A606D8007B9B9F /* ViewController07.swift in Sources */,
 				183E710122A4B9C400A7240F /* AppDelegate.swift in Sources */,
+				1844752922AF4FDE000A2391 /* SettingViewController.swift in Sources */,
 				180C576B22A6108B007B9B9F /* BlackViewController.swift in Sources */,
 				183E714422A51C6A00A7240F /* ViewController03.swift in Sources */,
 			);

@@ -89,7 +89,7 @@ class ViewController03: CommonViewController {
             talkBoxImgView.isHidden = false
             label.isHidden = false
         } else if count == 2 {
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 1/TimeInterval(speed*3), animations: {
                 self.henImgView.transform = CGAffineTransform(translationX: widthRate(rate:-0.7), y: 0)
                 shake(view: self.henImgView)
             }) { (success) in

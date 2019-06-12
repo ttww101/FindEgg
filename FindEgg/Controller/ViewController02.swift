@@ -42,26 +42,28 @@ class ViewController02: CommonViewController, UIViewControllerTransitioningDeleg
         view.bringSubviewToFront(replayBtn)
         view.bringSubviewToFront(previousBtn)
         view.bringSubviewToFront(nextBtn)
+        
+        
     }
     
     @objc func tap() {
         let centerX = view.center.x
         if count == 0 {
-            let label1 = TTLabel.redDesciptionLabel()
+            let label1 = TTLabel.brownDesciptionLabel()
             label1.text = "快乐农场的早晨"
             label1.sizeToFit()
             label1.center = CGPoint(x: centerX, y: 50)
             view.addSubview(label1)
             fadeIn(view: label1)
         } else if count == 1 {
-            let label2 = TTLabel.redDesciptionLabel()
+            let label2 = TTLabel.brownDesciptionLabel()
             label2.text = "鸡妈妈照顾许久的蛋"
             label2.sizeToFit()
             label2.center = CGPoint(x: centerX, y: 100)
             view.addSubview(label2)
             fadeIn(view: label2)
         } else if count == 2 {
-            let label3 = TTLabel.redDesciptionLabel()
+            let label3 = TTLabel.brownDesciptionLabel()
             label3.text = "终于要孵化了"
             label3.sizeToFit()
             label3.center = CGPoint(x: centerX, y: 150)
@@ -72,6 +74,13 @@ class ViewController02: CommonViewController, UIViewControllerTransitioningDeleg
             vc3.transitioningDelegate = self
             self.present(vc3, animated: true, completion: nil)
         }
+        if count < 2 {
+            Observable<Int>
+                .timer(1, scheduler: MainScheduler.instance)
+                .subscribe(onNext: { (ele) in
+                    self.tap()
+                })
+        }
         count += 1
     }
 
@@ -80,7 +89,7 @@ class ViewController02: CommonViewController, UIViewControllerTransitioningDeleg
 func fadeIn(view: UIView) {
     view.transform = CGAffineTransform(scaleX: 0.1, y: 0.1);
     
-    UIView.animate(withDuration: 1) {
+    UIView.animate(withDuration: 1/TimeInterval(speed*3)) {
         view.transform = CGAffineTransform(scaleX: 1, y: 1);
     }
 }

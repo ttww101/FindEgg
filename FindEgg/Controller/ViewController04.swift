@@ -74,7 +74,7 @@ class ViewController04: CommonViewController {
         } else if count == 1 {
             henImgView.isHidden = false
             henImgView.transform = CGAffineTransform(scaleX: 0.1, y: 0.1);
-            UIView.animate(withDuration: 1, animations: {
+            UIView.animate(withDuration: 1/TimeInterval(speed*3), animations: {
                 self.henImgView.transform = CGAffineTransform(scaleX: 1, y: 1);
             }) { (success) in
                 shake(view: self.henImgView)
